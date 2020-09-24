@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/weather_home"
+            android:id="@+id/nav_graph.xml">
+
+    <fragment
+            android:id="@+id/weather_home"
+            android:label="@string/weather_home"
+            tools:layout="@layout/fragment_weather_home"
+            android:name="com.javalon.weatherwhiz.ui.WeatherHomeFragment">
+
+        <action
+                android:id="@+id/action_home_to_detail"
+                app:destination="@id/weather_detail"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/weather_detail"
+            android:label="Weather Detail"
+            tools:layout="@layout/fragment_weather_detail"
+            android:name="com.javalon.weatherwhiz.ui.WeatherDetailFragment">
+
+        <argument
+                android:name="dailyForecast"
+                app:argType="com.javalon.weatherwhiz.model.DailyForecast[]"/>
+
+    </fragment>
+
+</navigation>

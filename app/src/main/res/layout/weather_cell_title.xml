@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:id="@+id/title_layout">
+
+    <ImageView
+            android:id="@+id/weather_image"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/weather_cond"
+            tools:text="PARTLY CLOUDY OVERNIGHT"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/metropolis_bold"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/weather_image"
+            app:layout_constraintTop_toTopOf="@id/weather_image"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/weather_temp"
+            tools:text="42°C"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/steelfish_outline"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            app:layout_constraintStart_toEndOf="@id/weather_image"
+            app:layout_constraintTop_toBottomOf="@id/weather_cond"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/today_date"
+            android:text="SUN\n16'"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/metropolis_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/weather_cond"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

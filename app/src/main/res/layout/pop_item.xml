@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weather_cond"
+            android:textColor="@android:color/white"
+            tools:text="Rain"
+            android:fontFamily="@font/metropolis_regular"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:gravity="center" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pop"
+            android:textColor="@android:color/white"
+            tools:text="20%"
+            android:fontFamily="@font/metropolis_regular"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:gravity="center" />
+
+    <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hourly_temp"
+            android:textColor="@android:color/white"
+            tools:text="27C"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/metropolis_regular"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:gravity="center" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour"
+            android:textColor="@android:color/white"
+            tools:text="07AM"
+            android:fontFamily="@font/metropolis_regular"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:gravity="center" />
+
+</LinearLayout>

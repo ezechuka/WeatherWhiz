@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1"
+        android:paddingTop="36dp"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.WeatherDetailFragment">
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/back_button"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:icon="@drawable/back_btn"-->
+<!--            app:iconTint="@android:color/black"-->
+<!--            app:iconSize="36dp"-->
+<!--            android:padding="0dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:iconPadding="0dp"-->
+<!--            app:iconGravity="textStart"-->
+<!--            app:rippleColor="@android:color/darker_gray"-->
+<!--            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>-->
+
+    <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="New York, US"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/metropolis_regular"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="2dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:cardCornerRadius="24dp"
+            android:layout_marginTop="48dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/next_week_forecast"
+                    android:text="NEXT 7 DAYS"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_extrabold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="32dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/update_time"
+                    android:text="Updated 24m ago"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/next_week_forecast"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_forecast"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    tools:listitem="@layout/weather_cell_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/next_week_forecast"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
