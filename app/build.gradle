@@ -95,6 +95,4 @@ dependencies {
 
     // charts
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-
-    implementation 'com.github.ezechuka:Digit2WordConverter:1.0.0'
 }
