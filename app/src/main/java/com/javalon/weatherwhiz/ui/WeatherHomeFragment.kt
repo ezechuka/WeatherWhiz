@@ -26,7 +26,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -88,6 +87,7 @@ class WeatherHomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val sharedPref = requireContext().getSharedPreferences(TAG, Context.MODE_PRIVATE)
         editor = sharedPref.edit()
+        editor.commit()
 
         unit = sharedPref.getString(Constants.UNITS, Constants.METRIC).toString()
         return getPersistentView(inflater, container)
@@ -346,8 +346,6 @@ class WeatherHomeFragment : Fragment() {
                     WeatherHomeFragmentDirections.actionHomeToDetail(this.daily.toTypedArray())
                 findNavController().navigate(detailAction)
             }
-
-            val hourlyForecast = this.hourly
 
 //            val prevData = weatherBinding.popLineChart.data
 //            if (prevData != null) {
