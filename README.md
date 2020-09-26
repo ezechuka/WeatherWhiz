@@ -18,5 +18,4 @@ using some of Android's latest development tools/principles such as Navigation c
 - Moshi
 
 ## Architecture :factory: :construction:
-WeatherWhiz uses MVVM [Model View ViewModel] architectural design pattern to have a robust, maintainable, testable, unidirectional flow of data(drive UI from a model)
-project which facilitates separation of concern.
+WeatherWhiz uses MVVM [Model View ViewModel] architectural design pattern to have a robust, maintainable & testable project which facilitates separation of concern & unidirectional flow of data(drive UI from a model)
